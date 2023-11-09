@@ -19,7 +19,7 @@ class DataBaseHelper{
   Future<Database> _initDatabase() async{
 
     Directory documentDirectory = await getApplicationSupportDirectory();
-    String path = join(documentDirectory.path, 'mytestdataabase.db');
+    String path = join(documentDirectory.path, 'tdbb.db');
     return await openDatabase(
       path,
       version: 1,

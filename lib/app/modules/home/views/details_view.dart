@@ -83,14 +83,19 @@ class DetailsView extends GetView {
                           alignment: Alignment.bottomRight,
                           child: SizedBox(
                             height: 40,
-                            width: 110,
-                            child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                    backgroundColor: AppColors.button
+                            width: 140,
+                            child: Container(
+                                decoration: BoxDecoration(
+                                    border: Border.all(width: 0.4,color: AppColors.button)
                                 ),
-                                onPressed: (){
+                                child: Row(mainAxisAlignment: MainAxisAlignment.center,
 
-                                }, child: Text('Read',style: TextStyle(fontSize: 16),)),
+                                  children: [
+                                    Icon(Icons.copy,color: AppColors.button,),
+                                    SizedBox(width: 10,),
+                                    Text('লিংক কপি করুন',style: TextStyle(fontSize: 14,color: AppColors.button),)
+                                  ],
+                                )),
                           ),
                         ),
                       ],

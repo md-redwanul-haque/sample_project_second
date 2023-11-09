@@ -97,21 +97,19 @@ class HomeView extends GetView<HomeController> {
                                     alignment: Alignment.bottomRight,
                                     child: SizedBox(
                                       height: 40,
-                                      width: 140,
-                                      child: Container(
-                                          decoration: BoxDecoration(
-                                              border: Border.all(width: 0.4,color: AppColors.button)
+                                      width: 110,
+                                      child: ElevatedButton(
+                                          style: ElevatedButton.styleFrom(
+                                              backgroundColor: AppColors.button
                                           ),
-                                          child: Row(mainAxisAlignment: MainAxisAlignment.center,
-
-                                            children: [
-                                              Icon(Icons.copy,color: AppColors.button,),
-                                              SizedBox(width: 10,),
-                                              Text('লিংক কপি করুন',style: TextStyle(fontSize: 14,color: AppColors.button),)
-                                            ],
-                                          )),
+                                          onPressed: (){
+                                            Get.to(() => DetailsView(
+                                              index: index,
+                                            ));
+                                          }, child: Text('Read',style: TextStyle(fontSize: 16),)),
                                     ),
                                   ),
+
                                 ],
                               ),
                             ),
